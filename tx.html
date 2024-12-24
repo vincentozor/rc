@@ -16,7 +16,7 @@
         }
 
         .container {
-            width: 90%;
+            width: 70%;
             max-width: 1200px;
             min-width: 320px;
             margin: 0 auto;
@@ -135,6 +135,96 @@
                 width: 200px;
             }
         }
+
+
+        .related-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.related-article-box {
+    background: white;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.related-article-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.related-article-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.related-article-box h3 {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    display: -webkit-box; /* Enable line clamping */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2.8em; /* Adjust to fit the number of lines */
+}
+
+.related-articles-grid a {
+    text-decoration: none;
+}
+
+
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+      .nav-links {
+          display: none; /* Hide on mobile */
+      }
+      .hamburger-menu {
+          display: flex; /* Show on mobile */
+      }
+
+      .article-title {
+        font-size: 1.5rem !important;
+      }
+
+      .article-content h2 {
+        font-size: 1.1rem !important;
+      }
+
+      .article-section {
+        padding: 15px !important;
+    }
+
+    .related-article-box {
+       padding: 5px !important;
+       
+    }
+
+    .related-article-box h3 {
+        font-size: 13px !important;
+      }
+
+      .related-articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px !important;
+        
+    }
+
+    .related-articles-grid {
+        padding:0 !important;
+    }
+  }
+  
     </style>
 </head>
 <body>
@@ -160,9 +250,7 @@
         </div>
 
         <div class="game-box">
-            <div class="game-image">
-                <img src="https://via.placeholder.com/350" alt="Placeholder Image">
-            </div>
+            
             <div class="game-info">
                 <h2 class="game-title">Game Title 2</h2>
                 <p>GTA 5 stands out for its massive open-world environment that players can freely explore. From the sprawling metropolis of Los Santos to the surrounding regions, the game delivers a seamless blend of storytelling and gameplay. Missions, side quests, and various activities keep players engaged for hours.</p>
@@ -170,9 +258,51 @@
                     <p>The online component, <strong>GTA Online</strong>, takes things further by offering multiplayer heists, activities, and a persistent online world.</p>
                     <p>With incredible graphics, gripping narratives, and endless gameplay opportunities, GTA 5 remains a pinnacle of modern gaming, captivating both new and returning players.</p>
                 
-                <a href="#" class="download-btn">Download Now</a>
+                
+                <div class="related-articles-grid">
+                    <a href="https://shedinet.com.ng/gta-5-apk">
+                        <div class="related-article-box">
+                            <img src="https://static.romspedia.com/webp/roms/grand-theft-auto-v-ps3-cover-340x483.webp" alt="GTA 5 APK OBB Download" class="related-article-img">
+                            <h3>GTA 5 APK OBB Download For Android</h3>
+                        </div>
+                    </a>
+                    <a href="https://shedinet.com.ng/gta-sa-apk">
+                        <div class="related-article-box">
+                            <img src="https://static.romspedia.com/webp/roms/grand-theft-auto-v-ps3-cover-340x483.webp" alt="GTA San Andreas APK OBB Download" class="related-article-img">
+                            <h3>GTA San Andreas APK OBB Download</h3>
+                        </div>
+                    </a>
+                    <a href="https://shedinet.com.ng/gta-sa-ram-gta-5-apk">
+                        <div class="related-article-box">
+                            <img src="https://static.romspedia.com/webp/roms/grand-theft-auto-v-ps3-cover-340x483.webp" alt="GTA SA Remastered Graphics for GTA 5 Apk Download" class="related-article-img">
+                            <h3>GTA SA Remastered Graphics for GTA 5 Apk Download</h3>
+                        </div>
+                    </a>
+                    <a href="https://shedinet.com.ng/gta-mzansi">
+                        <div class="related-article-box">
+                            <img src="https://static.romspedia.com/webp/roms/grand-theft-auto-v-ps3-cover-340x483.webp" alt="GTA Mzansi Apk Obb File Download" class="related-article-img">
+                            <h3>GTA Mzansi Apk Obb File Download</h3>
+                        </div>
+                    </a>
+                    <a href="https://shedinet.com.ng/gta-4-apk">
+                        <div class="related-article-box">
+                            <img src="https://static.romspedia.com/webp/roms/grand-theft-auto-v-ps3-cover-340x483.webp" alt="GTA 4 Apk Obb Data File Download (GTA IV)" class="related-article-img">
+                            <h3>GTA 4 Apk Obb Data File Download (GTA IV)</h3>
+                        </div>
+                    </a>
+                    <a href="https://shedinet.com.ng/gta-liberty-city-apk">
+                        <div class="related-article-box">
+                            <img src="https://static.romspedia.com/webp/roms/grand-theft-auto-v-ps3-cover-340x483.webp" alt="GTA Liberty City Stories Apk + Obb Download" class="related-article-img">
+                            <h3>GTA Liberty City Stories Apk + Obb Download</h3>
+                        </div>
+                    </a>
+                    
+                </div>
             </div>
         </div>
+
+        
+        
     </div>
 </body>
 </html>
