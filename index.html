@@ -10,13 +10,14 @@
             font-family: 'Futura', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #ece9e9;
             color: #333;
         }
 
         .container {
-            width: 60%;
+            width: 70%;
             max-width: 1200px;
+            min-width: 320px;
             margin: 0 auto;
             padding: 20px 0;
         }
@@ -31,6 +32,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex-wrap: wrap;
         }
 
         .game-box:hover {
@@ -39,17 +41,16 @@
         }
 
         .game-image {
-            flex: 0 0 350px;
+            flex: 0 0 30%;
+            max-width: 350px;
             height: auto;
         }
 
         .game-image img {
             width: 91%;
             height: auto;
-           padding: 15px;
-          
+            padding: 15px;
         }
-
 
         .game-info {
             flex: 1;
@@ -63,7 +64,7 @@
         }
 
         .game-description {
-            font-size: 1em;
+            font-size: 14px;
             margin-bottom: 15px;
             color: #666;
             line-height: 1.6;
@@ -89,6 +90,23 @@
             background-color: #0056b3;
         }
 
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .game-box {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .game-image {
+                flex: 0 0 40%;
+                max-width: none;
+            }
+
+            .game-info {
+                flex: 1;
+                padding: 15px;
+            }
+        }
+
         @media (max-width: 768px) {
             .game-box {
                 flex-direction: column;
@@ -108,13 +126,13 @@
                 padding: 20px;
             }
 
-            .container{
+            .container {
                 width: 90%;
             }
 
             .game-description strong {
-           width: 200px;
-        }
+                width: 200px;
+            }
         }
     </style>
 </head>
@@ -141,17 +159,17 @@
         </div>
 
         <div class="game-box">
+           
             <div class="game-info">
                 <h2 class="game-title">Game Title 2</h2>
-                <p class="game-description">
-                    This game has a fascinating storyline and a unique gameplay style that will keep you hooked for hours. Explore endless adventures!
-                </p>
+                 <p>GTA 5 stands out for its massive open-world environment that players can freely explore. From the sprawling metropolis of Los Santos to the surrounding regions, the game delivers a seamless blend of storytelling and gameplay. Missions, side quests, and various activities keep players engaged for hours.</p>
+                    <p>One of the game’s hallmarks is its attention to detail, which shines through its realistic settings, dynamic economy, and well-developed characters. The story touches on themes like crime, morality, and ambition, making for a truly immersive experience.</p>
+                    <p>The online component, <strong>GTA Online</strong>, takes things further by offering multiplayer heists, activities, and a persistent online world.</p>
+                    <p>With incredible graphics, gripping narratives, and endless gameplay opportunities, GTA 5 remains a pinnacle of modern gaming, captivating both new and returning players.</p>
+                
                 <a href="#" class="download-btn">Download Now</a>
             </div>
         </div>
-        
-
-        <!-- Add more game boxes as needed -->
     </div>
 </body>
 </html>
