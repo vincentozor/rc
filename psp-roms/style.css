@@ -56,6 +56,13 @@ body {
     color: #222;
 }
 
+.game-title2 {
+    font-size: 20px;
+    margin-bottom: 7px;
+    color: #222;
+    text-align: center;
+}
+
 .game-description {
     font-size: 14px;
     margin-bottom: 15px;
