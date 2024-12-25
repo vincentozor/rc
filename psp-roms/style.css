@@ -123,7 +123,7 @@ body {
 
     .game-info {
         width: auto;
-        padding: 20px;
+        padding: 10px;
     }
 
     .container {
@@ -352,6 +352,7 @@ margin-bottom: 1rem;
 .breadcrumb a{
     text-decoration: none;
     color: blue;
+    font-weight: bold;
 
 }
 
@@ -361,9 +362,11 @@ background-color: #007bff;
     padding: 20px 0;
     text-align: center;
     border-top:#e8491d 3px solid;
+    line-height: 25px;
 }
 .footer-links {
     margin-bottom: 20px;
+    font-size: 14px;
 }
 .footer-links a {
     color: #ddd;
@@ -391,6 +394,7 @@ background-color: #007bff;
     margin-bottom: 20px;
     font-size: 14px;
     border-top: 1px solid #fff;
+    font-weight: bold;
 }
 .back-to-top img {
     width: 180px; /* Adjust size as needed */
