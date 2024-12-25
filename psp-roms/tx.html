@@ -4,397 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROM Game Download Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Futura:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Futura', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #efeeee;
-            color: #333;
-        }
-
-        .container {
-            width: 70%;
-            max-width: 1200px;
-            min-width: 320px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        .game-box {
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            flex-wrap: wrap;
-        }
-
-        .game-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .game-image {
-            flex: 0 0 30%;
-            max-width: 350px;
-            height: auto;
-        }
-
-        .game-image img {
-            width: 91%;
-            height: auto;
-            padding: 15px;
-        }
-
-        .game-info {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .game-title {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: #222;
-        }
-
-        .game-description {
-            font-size: 14px;
-            margin-bottom: 15px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .game-description strong {
-            display: inline-block;
-            width: 250px;
-        }
-
-        .download-btn {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #0056b3;
-        }
-
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .game-box {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-
-            .game-image {
-                flex: 0 0 40%;
-                max-width: none;
-            }
-
-            .game-info {
-                flex: 1;
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .game-box {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .game-image {
-                flex: 0 0 auto;
-                width: 100%;
-                height: auto;
-                border-right: none;
-                border-bottom: 1px solid #ddd;
-            }
-
-            .game-info {
-                width: auto;
-                padding: 20px;
-            }
-
-            .container {
-                width: 90%;
-            }
-
-            .game-description strong {
-                width: 200px;
-            }
-        }
-
-
-        .related-articles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 900px;
-    margin: 2rem auto;
-}
-
-.related-article-box {
-    background: white;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.related-article-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.related-article-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.related-article-box h3 {
-    margin-top: 15px;
-    font-size: 1rem;
-    color: #333;
-}
-
-.related-articles-grid a {
-    text-decoration: none;
-}
-
-
-
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-      .nav-links {
-          display: none !important; /* Hide on mobile */
-      }
-      .hamburger-menu {
-          display: flex !important; /* Show on mobile */
-      }
-
-      .article-title {
-        font-size: 1.5rem !important;
-      }
-
-      .article-content h2 {
-        font-size: 1.1rem !important;
-      }
-
-      .article-section {
-        padding: 15px !important;
-    }
-
-    .related-article-box {
-       padding: 5px !important;
-       
-    }
-
-    .related-article-box h3 {
-        font-size: 13px !important;
-      }
-
-      .related-articles-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px !important;
-        
-    }
-
-    .related-articles-grid {
-        padding:0 !important;
-    }
-    
-  }
-  
-
-
-
-
-  header {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-      border-bottom:#f9f9f8 3px solid;
-  }
-  
-  nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-  }
-  
-  .logo img {
-      height: auto;
-      width: 160px;
-  }
-  
-  .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-  }
-  
-  .nav-links li {
-      display: inline;
-  }
-  
-  .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-  }
-  
-  .hamburger-menu {
-      cursor: pointer;
-      display: none; /* Hide by default */
-      flex-direction: column;
-      gap: 5px;
-  }
-  
-  .hamburger-menu span {
-      width: 25px;
-      height: 3px;
-      background-color: #fff;
-  }
-  
-  .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #35424a;
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-  }
-  
-  .overlay ul {
-      list-style: none;
-      padding: 0;
-  }
-  
-  .overlay ul li {
-      margin: 20px 0;
-  }
-  
-  .overlay ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-  }
-  
-  .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 24px;
-      cursor: pointer;
-      color: #fff;
-  }
-
-  /* Navigation */
-nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px;
-  }
-  
-  nav ul li a:hover {
-    border-bottom: 2px solid #fff;
-  }
-
-  .breadcrumb {
-    font-size: 0.85rem;
-    color: #777;
-    margin-bottom: 1rem;
-}
-
-
-
-.footer {
-    background-color: #007bff;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            border-top:#e8491d 3px solid;
-        }
-        .footer-links {
-            margin-bottom: 20px;
-        }
-        .footer-links a {
-            color: #ddd;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .footer-links a:hover {
-            color: #fff;
-            font-weight: bolder;
-        }
-        .social-icons {
-            margin-bottom: 20px;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            color: #fff;
-            font-size: 24px;
-            text-decoration: none;
-        }
-        .social-icons a:hover {
-            color: #ddd;
-        }
-        .copyright {
-            margin-bottom: 20px;
-            font-size: 14px;
-            border-top: 1px solid #fff;
-        }
-        .back-to-top img {
-            width: 180px; /* Adjust size as needed */
-            height: auto;
-        }
-        .back-to-top {
-            display: inline-block;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-    </style>
+    <link href='favicon.ico' rel='icon' type='image/x-icon' />
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+    <meta property="og:title" content="" />
+	<meta name="description" content="" />
+    <meta property="og:description" content="" />
+	<link rel="canonical" href="https://vincentozor.github.io/rc/" />
+    <meta property="og:url" content="https://vincentozor.github.io/rc/" />
+    <meta property="og:image" content="https://vincentozor.github.io/rc/psp-roms/img/.webp" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="RomStreet.Net" />
+	<meta property="og:image:width" content="750" />
+	<meta property="og:image:height" content="960" />
+   
 </head>
 <body>
 
     <header>
         <nav>
             <div class="logo">
-                <a href="https://shedinet.com.ng/"><img src="https://shedinet.com.ng/shedinet-name-logo.webp" alt="ShediNet Name Logo"></a>
+                <a href="https://shedinet.com.ng/"><img src="1735133051690.png" alt="ShediNet Name Logo"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="https://shedinet.com.ng/">HOME</a></li>
@@ -415,9 +48,9 @@ nav ul {
         <div class="close-btn" id="close-btn">X</div>
         <ul>
             <li><a href="https://shedinet.com.ng/">HOME</a></li>
-            <li><a href="https://shedinet.com.ng/psp">PSP ROMS</a></li>
-            <li><a href="https://shedinet.com.ng/ps2">PS2 ROMS</a></li>
-            <li><a href="https://shedinet.com.ng/ps3">PS3 ROMS</a></li>
+            <li><a href="https://shedinet.com.ng/psp-roms">PSP ROMS</a></li>
+            <li><a href="https://shedinet.com.ng/ps2-roms">PS2 ROMS</a></li>
+            <li><a href="https://shedinet.com.ng/ps3-roms">PS3 ROMS</a></li>
             <li><a href="https://shedinet.com.ng/privacy">PRIVACY</a></li>
             <li><a href="https://shedinet.com.ng/contact">CONTACT</a></li>
         </ul>
@@ -425,12 +58,12 @@ nav ul {
 
 
     <div class="container">
-        <div class="breadcrumb">HOME / PS2 ROM / The Best ROM Games of All Time</div>
+        <div class="breadcrumb"><a href="">HOME</a> / <a href="">PS2 ROM</a> / The Best ROM Games of All Time</div>
         <h1 style="font-size: 23px;">Grand Theft Auto - Vice City Stories</h1>
        
         <div class="game-box">
             <div class="game-image">
-                <img src="https://static.romspedia.com/webp/roms/dragon-ball-Z-shin-budokai-2-psp-cover-europe-340x483.webp" alt="Grand Theft Auto - Vice City Stories">
+                <img src="https://romsfun.com/wp-content/uploads/2019/09/Grand-Theft-Auto-Vice-City.jpg" alt="Grand Theft Auto - Vice City Stories">
             </div>
             <div class="game-info">
                 <h2 class="game-title">Grand Theft Auto - Vice City Stories</h2>
@@ -510,23 +143,21 @@ nav ul {
 
 <footer class="footer">
     <div class="footer-links">
-        <a href="https://shedinet.com.ng/">Home</a>
-        <a href="https://shedinet.com.ng/games">Games</a>
-        <a href="https://shedinet.com.ng/apps">Apps</a>
-        <a href="https://shedinet.com.ng/privacy">Privacy</a>
-        <a href="https://shedinet.com.ng/contact">Contact</a>
+        <a href="https://shedinet.com.ng/">HOME</a>
+        <a href="https://shedinet.com.ng/psp-roms">PSP ROMS</a>
+        <a href="https://shedinet.com.ng/ps2-roms">PS2 ROMS</a>
+        <a href="https://shedinet.com.ng/ps3-roms">PS3 ROMS</a>
+        <a href="https://shedinet.com.ng/privacy">PRIVACY</a>
+        <a href="https://shedinet.com.ng/contact">CONTACT</a>
     </div>
     <div class="social-icons">
         <h3 style="color: #fff;">Follow Us</h3>
         <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-        <a href="#"><i class="fab fa-telegram"></i></a>
-    </div>
+        </div>
     <div class="copyright"><br>
-      ShediNet  © Copyright 2024, All Rights Reserved.
+      RomStreet.Net  © Copyright 2025, All Rights Reserved.
     </div>
 
 </footer>
