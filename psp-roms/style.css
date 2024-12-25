@@ -210,6 +210,9 @@ gap: 10px !important;
 padding:0 !important;
 }
 
+.container{
+    width: 95% !important;
+}
 }
 
 
