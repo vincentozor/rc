@@ -48,6 +48,11 @@ body {
 .game-info {
     flex: 1;
     padding: 20px;
+    font-size: 14px !important;
+}
+
+.game-info h2{
+    font-size: 19px;
 }
 
 .game-title {
