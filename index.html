@@ -3,174 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROM Game Download Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Futura:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Futura', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ece9e9;
-            color: #333;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            min-width: 320px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        .game-box {
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            flex-wrap: wrap;
-        }
-
-        .game-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .game-image {
-            flex: 0 0 30%;
-            max-width: 350px;
-            height: auto;
-        }
-
-        .game-image img {
-            width: 91%;
-            height: auto;
-            padding: 15px;
-        }
-
-        .game-info {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .game-title {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #222;
-        }
-
-        .game-description {
-            font-size: 14px;
-            margin-bottom: 15px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .game-description strong {
-            display: inline-block;
-            width: 250px;
-        }
-
-        .download-btn {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #0056b3;
-        }
-
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .game-box {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-
-            .game-image {
-                flex: 0 0 40%;
-                max-width: none;
-            }
-
-            .game-info {
-                flex: 1;
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .game-box {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .game-image {
-                flex: 0 0 auto;
-                width: 100%;
-                height: auto;
-                border-right: none;
-                border-bottom: 1px solid #ddd;
-            }
-
-            .game-info {
-                width: auto;
-                padding: 20px;
-            }
-
-            .container {
-                width: 90%;
-            }
-
-            .game-description strong {
-                width: 200px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://romstreet.net/favicon.ico' rel='icon' type='image/x-icon' />
+    <link rel="stylesheet" href="style.css">
+    <title>RomStreet.Net - Download ROMs, ISO and FREE Emulator Games</title>
+    <meta property="og:title" content="RomStreet.Net - Download ROMs, ISO and FREE Emulator Games" />
+	<meta name="description" content="Download ROMs for GBA, PSP, DS & More | Emulator Games for Android, PC, Mac & iOS" />
+    <meta property="og:description" content="Download ROMs for GBA, PSP, DS & More | Emulator Games for Android, PC, Mac & iOS" />
+	<link rel="canonical" href="https://romstreet.net/" />
+    <meta property="og:url" content="https://romstreet.net/" />
+    <meta property="og:image" content="https://romstreet.net/roomstreet.webp" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="RomStreet.Net" />
+	<meta property="og:image:width" content="750" />
+	<meta property="og:image:height" content="960" />
 </head>
 <body>
-    <div class="container">
-        <div class="game-box">
-            <div class="game-image">
-                <img src="https://static.romspedia.com/webp/roms/dragon-ball-Z-shin-budokai-2-psp-cover-europe-340x483.webp" alt="Grand Theft Auto - Vice City Stories">
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="https://romstreet.net/"><img src="https://romstreet.net/romstreet-name.webp" alt="RomStreet.Net Name"></a>
             </div>
+            <ul class="nav-links">
+                <li style="background: rgba(0, 0, 0, 0.5); border-radius: 30%; width: 70px; height: auto;"><a href="https://romstreet.net/">HOME</a></li>
+                <li><a href="https://romstreet.net/psp-roms/">PSP ROMS</a></li>
+                <li><a href="https://romstreet.net/ps2-roms/">PS2 ROMS</a></li>
+                <li><a href="https://romstreet.net/ps3-roms/">PS3 ROMS</a></li>
+                <li><a href="https://romstreet.net/privacy">PRIVACY</a></li>
+                <li><a href="https://romstreet.net/contact">CONTACT</a></li>
+            </ul>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="overlay" id="overlay">
+        <div class="close-btn" id="close-btn">X</div>
+        <ul>
+            <li style="background: rgba(0, 0, 0, 0.5); border-radius: 30%; width: 70px; height: auto; text-align: center;"><a href="https://romstreet.net/">HOME</a></li>
+            <li><a href="https://romstreet.net/psp-roms/">PSP ROMS</a></li>
+            <li><a href="https://romstreet.net/ps2-roms/">PS2 ROMS</a></li>
+            <li><a href="https://romstreet.net/ps3-roms/">PS3 ROMS</a></li>
+            <li><a href="https://romstreet.net/privacy">PRIVACY</a></li>
+            <li><a href="https://romstreet.net/contact">CONTACT</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container">
+       
+
+        <div class="game-box">
+            
             <div class="game-info">
-                <h2 class="game-title">Grand Theft Auto - Vice City Stories</h2>
-                <p class="game-description">
-                    <strong>Rating:</strong> <span> ★★★★</span><br><br>
-                    <strong>File Name:</strong> Grand Theft Auto - Vice City Stories (USA) (v1.03).zip<br><br>
-                    <strong>Size:</strong> 1.5 GB<br><br>
-                    <strong>Console:</strong> PSP<br><br>
-                    <strong>Category:</strong> Action<br><br>
-                    <strong>Region:</strong> USA<br><br>
-                    <strong>Release Year:</strong> 2006<br><br>
-                    <strong>Downloads:</strong> 476,022<br>
-                </p>
-                <a href="#" class="download-btn">Download Now</a>
+                
+                <div class="related-articles-grid">
+                    <a href="https://romstreet.net/psp-roms/">
+                        <div class="related-article-box">
+                            <img src="https://romstreet.net/psp-roms/img/psp-roms.webp" alt="PlayStation Portable (PSP) ROMs" class="related-article-img">
+                            <h3>PlayStation Portable (PSP) ROMs</h3>
+                        </div>
+                    </a>
+                    <a href="https://romstreet.net/ps2-roms/">
+                        <div class="related-article-box">
+                            <img src="https://romstreet.net/ps2-roms/img/ps2-roms.webp" alt="Sony PS2 ROMs - PlayStation 2 Games" class="related-article-img">
+                            <h3>PS2 ROMs - PlayStation 2 Games</h3>
+                        </div>
+                    </a>
+                    <a href="https://romstreet.net/ps3-roms/">
+                        <div class="related-article-box">
+                            <img src="https://romstreet.net/ps3-roms/img/ps3-roms.webp" alt="Sony PS3 ROMs - PlayStation 3 Games" class="related-article-img">
+                            <h3>PS3 ROMs - PlayStation 3 Games</h3>
+                        </div>
+                    </a>
+                    
+                    
+                </div> 
+             
+    
+
             </div>
         </div>
 
+        
+        
+
+
         <div class="game-box">
-           
+            
             <div class="game-info">
-                <h2 class="game-title">Game Title 2</h2>
-                 <p>GTA 5 stands out for its massive open-world environment that players can freely explore. From the sprawling metropolis of Los Santos to the surrounding regions, the game delivers a seamless blend of storytelling and gameplay. Missions, side quests, and various activities keep players engaged for hours.</p>
-                    <p>One of the game’s hallmarks is its attention to detail, which shines through its realistic settings, dynamic economy, and well-developed characters. The story touches on themes like crime, morality, and ambition, making for a truly immersive experience.</p>
-                    <p>The online component, <strong>GTA Online</strong>, takes things further by offering multiplayer heists, activities, and a persistent online world.</p>
-                    <p>With incredible graphics, gripping narratives, and endless gameplay opportunities, GTA 5 remains a pinnacle of modern gaming, captivating both new and returning players.</p>
                 
-                <a href="#" class="download-btn">Download Now</a>
+                <div>
+                    <p>PlayStation ROMs Download | Emulator Games for PC, Mobile & More. RomStreet.Net provides a simple way for you to download ROMs and play them on your computer or online within your browser. Emulators are provided that can play the ROM game you download. Start playing your favorite PlayStation games with our extensive collection of PSP, PS2, and PS3 ROMs. All of our ROMs are easy to find, with fast downloading speeds and high-quality gameplay on all your devices. Our emulator games run on PC, Mobile, Mac, iOS, and Android devices, ensuring you can play anywhere, anytime. With our simple download process, you'll be gaming in no time, enjoying fast and secure downloads, high-quality emulation, and compatibility with PC, Mac, iOS, Android, and mobile devices, all through an easy-to-use interface.</p>
+                    </div>
+                    
+                    
             </div>
         </div>
     </div>
+
+
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="https://romstreet.net/">HOME</a>
+        <a href="https://romstreet.net/ps2-roms/">PSP ROMS</a>
+        <a href="https://romstreet.net/ps2-roms/">PS2 ROMS</a><br>
+        <a href="https://romstreet.net/ps3-roms/">PS3 ROMS</a>
+        <a href="https://romstreet.net/privacy">PRIVACY</a>
+        <a href="https://romstreet.net/contact">CONTACT</a>
+    </div>
+    <div class="social-icons">
+        <h3 style="color: #fff;">Follow Us</h3>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    <div class="copyright"><br>
+      RomStreet.Net  © Copyright 2025, All Rights Reserved.
+    </div>
+
+</footer>
+
+
+
+<script>
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+document.getElementById('overlay').style.display = 'flex';
+});
+
+document.getElementById('close-btn').addEventListener('click', function() {
+document.getElementById('overlay').style.display = 'none';
+});
+
+
+
+document.getElementById('hamburger').addEventListener('click', function() {
+document.getElementById('nav').classList.toggle('active');
+});
+
+</script>
+
 </body>
 </html>
-
