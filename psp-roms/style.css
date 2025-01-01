@@ -298,7 +298,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: #35424a;
+background-color: #007bff;
 display: none;
 flex-direction: column;
 justify-content: center;
@@ -376,7 +376,7 @@ background-color: #007bff;
     font-size: 14px;
 }
 .footer-links a {
-    color: #ddd;
+    color: #fff !important;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
